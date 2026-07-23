@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body id="body">
+
+    <div id="CRUDS">
+
+         <button onclick="changeMood(this.id)" id="darkMood"><i class="fa-solid fa-moon"></i></button>
+
+        <div class="head">
+            <h1 >CRUDS</h1>
+           
+            <p id="disc" >product management system</p>
+        </div>
+
+
+        <div class="input">
+            <input type="text" id="title" placeholder="title">
+
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+                <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                <small id="total"></small>
+            </div>
+
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+
+            <button id="submit">Create</button>
+        </div>
+
+
+        <div class="output">
+
+            <div class="searchBlock">
+                <input onkeyup="(SearchData(this.value))" type="text" id="search" placeholder="search">
+
+                <div class="buttonSearch">
+                    <button onclick="getSearchMood(this.id)" id="searchTitle">Search By title</button>
+                    <button onclick="getSearchMood(this.id)" id="searchCategory">Search By category</button>
+                </div>
+
+            </div>
+
+
+            <div id="deleteAll"></div>
+
+
+              <table>
+
+                <tr >
+                   <th class="tableHeed">id</th>
+                   <th class="tableHeed">title</th>
+                   <th class="tableHeed">price</th>
+                   <th class="tableHeed">taxes</th>
+                   <th class="tableHeed">ads</th>
+                   <th class="tableHeed">discount</th>
+                   <th class="tableHeed">total</th>
+                   <th class="tableHeed">category</th>
+                   <th class="tableHeed">update</th>
+                   <th class="tableHeed">delete</th>
+                </tr>
+
+
+                <tbody id="tbody">
+
+                </tbody>
+
+
+            </table>
+
+        </div>
+
+
+    </div>
+
+
+<script src="main.js"></script>
+
+
+<footer id="footer">
+    <p>Designed by <span>Ahmed Ali</span> | 
+    <a href="https://www.linkedin.com/in/ahmed-ali-55b315400?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+    <i id="linkedin" class="fa-brands fa-linkedin"></i>    </a></p>
+</footer>
+
+
+</body>
+</html>
